@@ -1,0 +1,73 @@
+[build-system]
+requires = ["setuptools>=61", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "blora"
+version = "1.0.0"
+description = "BloRA — BCMS + LoRA complementary-subspace PEFT adapter. Single-matmul inference, rank-agnostic batched serving."
+authors = [
+    { name = "PT Raya Laksana Teknologi", email = "demo@ralafs.com" },
+]
+maintainers = [
+    { name = "ralafs.com", email = "demo@ralafs.com" },
+]
+license = { text = "All Rights Reserved" }
+readme = "README.md"
+requires-python = ">=3.10"
+keywords = ["peft", "lora", "fine-tuning", "llm", "adapter", "circulant", "serving"]
+classifiers = [
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "License :: Other/Proprietary License",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+    "Operating System :: OS Independent",
+]
+dependencies = [
+    "torch>=2.0",
+    "numpy>=1.24",
+    "scipy>=1.11",
+    "transformers>=4.36",
+    "lion-pytorch>=0.2",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7",
+    "pytest-cov>=4",
+    "ruff>=0.1",
+    "mypy>=1.7",
+    "pre-commit>=3",
+]
+benchmark = [
+    "datasets>=2.14",
+    "matplotlib>=3.7",
+    "seaborn>=0.13",
+]
+
+[project.urls]
+Homepage = "https://ralafs.com"
+Documentation = "https://ralafs.com"
+Contact = "mailto:demo@ralafs.com"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+include = ["blora*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+python_files = ["test_*.py"]
+addopts = "-v --tb=short"
+
+[tool.ruff]
+line-length = 100
+target-version = "py310"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "W"]
+
+[tool.mypy]
+python_version = "3.10"
+strict = false
+ignore_missing_imports = true

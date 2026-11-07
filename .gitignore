@@ -1,0 +1,54 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+*.egg
+dist/
+build/
+.eggs/
+*.so
+
+# Virtual environments
+.venv/
+venv/
+.blora-env/
+blora-env/
+.env
+
+# Test / coverage / type caches
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+coverage.xml
+htmlcov/
+.benchmarks/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Notebooks
+.ipynb_checkpoints/
+
+# Model artifacts / runs (never commit weights or eval dumps)
+*.safetensors
+*.bin
+*.pt
+*.ckpt
+ckpt/
+results/
+benchmark_results.json
+*.log
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Secrets — never commit
+.hf_token
+*.key
+secrets.*
