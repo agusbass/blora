@@ -12,7 +12,7 @@ authors = [
 maintainers = [
     { name = "ralafs.com", email = "demo@ralafs.com" },
 ]
-license = { text = "All Rights Reserved" }
+license = { text = "MIT" }
 readme = "README.md"
 requires-python = ">=3.10"
 keywords = ["peft", "lora", "fine-tuning", "llm", "adapter", "circulant", "serving"]
@@ -20,7 +20,7 @@ classifiers = [
     "Programming Language :: Python :: 3.10",
     "Programming Language :: Python :: 3.11",
     "Programming Language :: Python :: 3.12",
-    "License :: Other/Proprietary License",
+    "License :: OSI Approved :: MIT License",
     "Topic :: Scientific/Engineering :: Artificial Intelligence",
     "Operating System :: OS Independent",
 ]
